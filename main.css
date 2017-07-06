@@ -1,0 +1,407 @@
+/*main.css*/
+
+/* Integrieren eigener Fonts */
+
+/* Serif-Style */
+@font-face {
+  font-family: DroidSerif;
+  src: url("fonts/Droid_Serif/DroidSerif.ttf");
+  font-style: normal;
+  font-weight: normal; /* IE */
+  src: local('DroidSerif'), url('fonts/Droid_Serif/DroidSerif.ttf') format('truetype');
+}
+@font-face {
+  font-family: Noto;
+  src: url("fonts/Noto_Serif/NotoSerif-Regular.ttf");
+  font-style: normal;
+  font-weight: normal; /* IE */
+  src: local('Noto'), url('fonts/Noto_Serif/NotoSerif-Regular.ttf') format('truetype'); 
+}
+
+/* Sans-Serif-Style*/
+@font-face {
+	font-family: Monk;
+	src: url("fonts/Monk_Typeface/Monk.ttf");
+  	font-style: normal;
+  	font-weight: normal; /* IE */
+  	src: local('Monk'), url("fonts/Monk_Typeface/Monk.ttf"), format('truetype');
+}
+@font-face {
+  font-family: LibreFranklin;
+  src: url("fonts/Libre_Franklin/LibreFranklin-Regular.ttf");
+  font-style: normal;
+  font-weight: normal; /* IE */
+  src: local('LibreFranklin'), url('fonts/Libre_Franklin/LibreFranklin-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Yantra;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Yantramanav/Yantramanav-Regular.ttf"); /* IE */
+  src: local('Yantra'), url('fonts/Yantramanav/Yantramanav-Regular.ttf') format('truetype');
+}
+
+
+html, head, body, h1, h2, h3, h4, p, ul, ol, li, a, div, section, header, nav, article, footer {
+	padding: 0;
+	margin: 0;
+	font-style: inherit;
+	font-size: 16px; /*16px is default font -size in most browers; to convert it to em, its best to clarify this at <html> */
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+	margin: 40px auto 0 auto;
+	width: 90%;
+	background-color: hsla(193, 62%, 51%, 0.25);
+
+}
+
+h2 {
+	font-family: Monk, LibreFranklin, Helvetica, sans-serif;
+	font-size: 2em; /* 50px/16px */
+	line-height: 1.5;
+	font-weight: normal;
+	color: #333;
+}
+
+h3 {
+	font-family: Monk, LibreFranklin, Yantra, sans-serif;
+	font-weight: normal;
+	color: #333;
+}
+
+p {
+	font-size: LibreFranklin, Yantra, sans-serif;
+	font-weight: normal;
+}
+
+img {
+	max-width: 100%; 
+}
+
+header {
+	position: relative;
+	width:100%;
+	padding-top: 15%;
+	background-color: #eee;
+	margin-bottom: 1%;
+	box-shadow: 0 1px 1px #000;
+	border-radius: 2px 2px 4px 4px;
+}
+
+ul {
+	list-style: none;
+}
+
+li a {
+    font-family: DroidSerif, Noto, "Helvetice Neue", Helvetica, Garamond, serif;
+    display: inline;
+    color: hsla(27, 100%, 100%, 1);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+.logo {
+	float: left;
+	background: url(images/Logo.png) no-repeat;
+	background-size: cover;
+	display: block;
+	height: 100%; /*original Masse= 400x250; in em= 250/16*/
+	width: 33%;
+	position: absolute;
+	top:0;
+	left: 0;
+	text-indent: -9999px;
+	
+
+}
+.logo:hover, .logo:focus {
+	background-position: 0 78.5%;
+}
+
+header h2 {
+	float: left;
+	text-align: center;
+	width: 58%;
+	margin: 3% 0 0 32%;
+	position: absolute;
+	top: 0;
+}
+
+nav.navtop {
+	text-align: center;
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0.5em 0;
+	background-color:  hsla(199, 56%, 30%, 1);
+	width: 455px;
+}
+
+nav.navtop li {
+	display: inline;
+}
+
+nav.navtop li a:hover{
+	background-color: hsla(198, 61%, 52%, 1);
+	color: #fff;
+}
+
+.active {
+	background-color: hsla(198, 61%, 52%, 1);
+}
+
+section.articles {
+	float: left;
+	width: 66.5%;
+	margin-left: 1%;
+}
+
+
+article {
+	margin-bottom: 5px;
+	padding: 3.5%;
+	background-color: #eee;
+	box-shadow: 0 1px 1px #000;
+	border-radius: 4px 4px 1px 50px;
+} 
+
+.crop {
+	width: 190px;
+	overflow: hidden;
+	float: left;
+}
+.crop img {
+	width: 400px;
+	height: auto;
+}
+
+.clear {
+	clear:both;
+}
+
+.articles h3 a {
+	margin-top: 1%;
+	margin-left: 2%;
+	text-decoration: none;
+	color: #333;
+	font-size: 3em;
+	font-family: Monk, LibreFranklin, sans-serif;
+}
+
+.articles p {
+	margin-top: 1%;
+	margin-left: 25%;
+	text-decoration: none;
+	color: #333;
+	font-size: 1.5em;
+}
+
+.articles p a {
+	font-size: 2em;
+	text-decoration: none;    
+	font-family: DroidSerif, Noto, "Helvetice Neue", Helvetica, Garamond, serif;
+    display: inline;
+    color: hsla(27, 100%, 100%, 1);
+    padding: 0.5em 1em;
+    color: hsla(27, 100%, 50%, 1);
+}
+
+aside {
+	float: left;
+	text-align: center;
+	width: 32.5%;
+	position: relative;
+	background-color: #eee;
+	box-shadow: 0 3px 3px #969c8a, 0 4px 1px #fff; 
+	border-radius: 4px 4px 5px 50px;
+
+}
+
+aside li {
+	padding: 10% 0;
+	box-shadow: 0 3px 3px #969c8a, 0 4px 1px #fff;
+	border-radius: 0 0 5px 50px;
+}
+
+aside li a {
+    color: hsla(27, 100%, 50%, 1);
+
+}
+
+aside li:last-child {
+	box-shadow: none;
+	border-radius:none;
+}
+
+footer {
+	clear: left;
+	position: relative;
+	top: 0em;
+	background-color: hsla(198, 14%, 10%, 1);
+	text-align: center;
+	padding: 1em 0;
+	font-size: 0.825em;
+}
+
+footer ul{
+
+}
+footer li{
+	display: inline;
+	color: #fff;
+	padding-left: 4em;
+}
+
+		/*---->Media-Related-Content for HEADER-SECTION<----*/
+
+@media screen and (max-width: 1024px){
+	header h2{
+		font-weight: lighter;
+		margin-left: 35%;
+		width: 60%
+	}
+}
+
+@media screen and (max-width: 870px) {
+	nav.navtop{
+		width:67%;
+		padding: 0.2% 0;
+	}
+	.navtop li a{
+		padding: 0.3% 1.3%;
+	}
+	.navtop ul li:first-child{
+	
+	}
+	header h2 {
+		font-size: 1.3em;
+		font-weight: normal;
+		float: left;
+		text-align: center;
+		width: 60%;
+		margin: 3% 0 0 34%;
+		position: absolute;
+		top: 0;
+	}
+
+	}
+
+	.logo:hover, .logo:focus {
+	background-position: 0 78.5%;
+	}
+
+
+@media screen and (max-width: 580px) {
+	header {
+		position: relative;
+		width:100%;
+		padding-top: 50%;
+		background-color: hsla(198, 88%, 40%, 0.5);
+		margin-bottom: 2%;
+	}
+
+	.logo {
+		background: url(images/Logo.png) no-repeat;
+		background-size: cover;
+		display: block;
+		/*height: 100%; /*original Masse= 400x250; in em= 250/16*/
+		width: 100%;
+		position: absolute;
+		top:0;
+		left: 0;
+		text-indent: -9999px;
+		
+
+	}
+	.logo:hover, .logo:focus {
+		background-position: 0 0;
+	}
+
+	header h2 {
+		text-indent: -999999px;
+	}
+
+	nav.navtop {
+
+		position: relative;
+		bottom: 0;
+		right: 0;
+		padding: 1% 0;
+		background-color:  hsla(199, 56%, 30%, 1);
+		width: 100%;
+		font-size: 0.825em;
+	}
+
+	nav.navtop li a {
+		display: inline;
+		padding: 1% 3%;
+
+	}
+	nav.navtop li a:hover{
+		background-color: hsla(198, 61%, 52%, 1);
+		padding: 1% 3%;
+		font-size: 1em;
+	}
+	.active {
+		background-color: hsla(198, 61%, 52%, 1);
+	}
+
+}
+
+@media only screen and (max-width: 472px) {
+		.navtop li a {
+			/*drop down menu*/
+		}
+}
+
+	/*---->Media-Related-Content-Positioning for MAIN-SECTION<----*/
+
+@media only screen and (max-width: 870px) {
+	.main, .articles, aside {
+		width: 100%
+	}
+	section.articles {
+		width: 100%;
+		margin-left: 0;
+	}
+	.articles {
+		position: relative;
+		top: 0;
+		left: 0;
+		border-bottom: 1px solid #555;
+		margin-bottom: 2.5%;
+		padding-top: 1%;
+		padding-bottom:2.5%;
+	}
+	aside {
+		padding: 1% 0;
+	}
+	aside li{
+		padding: 2% 0;
+	}
+	.articles p, .articles h3 a {
+		margin-left: 0;
+	}
+	.articles p a {
+		padding: 0 0;
+	}
+}
+
+@media only screen and (min-width: 871px) {
+	.main, .articles, aside{
+		position: relative;
+		top: 0;
+	}
+	aside{
+		left: -67.5%;
+	}
+
+	.articles {
+		left: 32.5%;
+	}
+
+}
+
